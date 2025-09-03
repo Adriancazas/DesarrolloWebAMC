@@ -1,0 +1,72 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0052D4, #4364F7); 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box_login {
+    background: white;
+    width: 300px;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+.logo_bienvenida p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+
+.texto_campo p {
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    outline: none;
+}
+
+
+.boton_login input[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.boton_login input[type="submit"]:hover {
+    background: #000;
+    color: #fff;
+}

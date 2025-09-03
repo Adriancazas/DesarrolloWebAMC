@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mis Amigos</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="amigos_data.js" defer></script>
+    <script src="amigos_crud.js" defer></script>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div>
+            <h1>Mis Amigos</h1>
+            <h3>Soy una persona muy reservada, pero tengo amigos con los cuales la paso bien en diferentes ocasiones y momentos.</h3>
+        </div>
+        <div>
+            <img src="image\amigos.jpeg" alt="amigos" width="500" />
+        </div>
+    </div>
+
+    <!-- SECCIÓN CRUD AGREGADA -->
+    <div class="crud-section">
+        <h2>Gestión de Mis Amigos</h2>
+        
+        <!-- Formulario para agregar/editar amigos -->
+        <div class="form-container">
+            <h3 id="form-title">Agregar Nuevo Amigo</h3>
+            <form id="amigo-form">
+                <input type="hidden" id="amigo-id">
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submit-btn">Guardar</button>
+                    <button type="button" id="cancel-btn" style="display: none;">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Tabla de amigos -->
+        <div class="table-container">
+            <h3>Lista de Mis Amigos</h3>
+            <table id="tabla-amigos">
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Celular</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="amigos-body">
+                    <!-- Los datos se cargarán dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <a href="yo.html">
+        <img src="image\flecha de regresar al inicio.png" alt="Volver" width="85" />
+    </a>
+    <a href="enviamemensaje.html">
+        <img src="image\enviamensaje.png" alt="Enviar mensaje" width="85" />
+    </a>
+</body>
+</html>
+
+

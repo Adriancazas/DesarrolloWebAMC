@@ -1,0 +1,47 @@
+body {
+    background-color: #ffffff;
+}
+
+.container {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #FF0000;
+    background-color: #ffff00;
+    text-align: center;
+}
+
+input[type="number"], input[type="submit"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #FF0000;
+    color: white;
+}
+
+.containerOrd {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #FF0000;
+    background-color: #ffff00;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    border: 1px solid #FF0000;
+    background-color: #FFFFCC;
+    padding: 10px;
+    border-radius: 4px;
+}

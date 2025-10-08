@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño con Flexbox - Ejercicio 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .main-container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(167, 9, 9, 0.1);
+            overflow: hidden;
+        }
+        
+        
+        header {
+            background-color: #008779;
+            color: white;
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .white-square {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 4px;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        
+        .content {
+            display: flex;
+        }
+        
+        
+        .sidebar {
+            width: 200px;
+            background-color: #d8faa2;
+            padding: 20px 0;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 20px;
+        }
+        
+        .sidebar-menu li {
+            color: #428318;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .sidebar-menu li:hover {
+            background-color: #c5f082;
+        }
+        
+        
+        .main-content {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        .contact-section {
+            background-color: #fffecd;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 25px;
+        }
+        
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2e8f76;
+            font-size: 22px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #2e8f76;
+        }
+        
+        .form-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        
+        .form-row {
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-label {
+            flex: 1;
+            font-weight: bold;
+            text-align: right;
+            padding-right: 20px;
+            color: #495057;
+            font-size: 16px;
+        }
+        
+        .form-value {
+            flex: 2;
+            padding: 10px 14px;
+            background-color: white;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 15px;
+            color: #495057;
+        }
+        
+        textarea.form-value {
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        
+        .submit-button {
+            background-color: #47a10c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-button:hover {
+            background-color: #3d900a;
+        }
+        
+      
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a6fa5;
+            color: white;
+            font-size: 14px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                padding: 15px 0;
+            }
+            
+            .sidebar-menu {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .form-label {
+                text-align: left;
+                padding-right: 0;
+                margin-bottom: 8px;
+                width: 100%;
+            }
+            
+            .form-value {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            header h1 {
+                font-size: 24px;
+            }
+            
+            .contact-section h2 {
+                font-size: 20px;
+            }
+            
+            .sidebar-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="white-square"></div>
+            <h1>Website Name</h1>
+        </header>
+        
+        <div class="content">
+            
+            <div class="sidebar">
+                <ul class="sidebar-menu">
+                    <li>Inicio</li>
+                    <li>Formulario</li>
+                    <li>Acerca de</li>
+                </ul>
+            </div>
+            
+         
+            <div class="main-content">
+                <div class="contact-section">
+                    <h2>Contactanos</h2>
+                    
+                    <div class="form-grid">
+                        <div class="form-row">
+                            <div class="form-label">Nombre:</div>
+                            <div class="form-value">Pin Dos</div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-label">Correo electrónico:</div>
+                            <div class="form-value">Pin_dos@example.com</div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-label">Sitio web:</div>
+                            <div class="form-value">http://pimdos.com</div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-label">Mensaje:</div>
+                            <textarea class="form-value"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="button-container">
+                        <button class="submit-button">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Universidad de San Francisco Xavier - Facultad de Tecnología</p>
+            <p>Sucre - Bolivia</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducir Palabra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #0070C0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00509E;
+        }
+        .volver {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Introducir Palabra para Diagonal</h2>
+    
+    <form action="diagonal.php" method="POST">
+        <div class="form-group">
+            <label for="palabra">Palabra:</label>
+            <input type="text" id="palabra" name="palabra" required maxlength="20">
+        </div>
+        
+        <div class="form-group">
+            <label for="color">Color del Texto:</label>
+            <input type="color" id="color" name="color" value="#0000FF">
+        </div>
+        
+        <div class="form-group">
+            <label for="color_fondo">Color de Fondo:</label>
+            <input type="color" id="color_fondo" name="color_fondo" value="#FFFF00">
+        </div>
+        
+        <button type="submit">Mostrar en Diagonal</button>
+    </form>
+    
+   
+</body>
+</html>

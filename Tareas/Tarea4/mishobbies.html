@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Hobbies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1, h2, h3, h4 {
+            color: #1e3d59;
+        }
+        .crud-section {
+            margin: 30px auto;
+            max-width: 1000px;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #1e3d59;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .form-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #1e3d59;
+            color: white;
+        }
+        .form-buttons button[type="button"] {
+            background-color: #6c757d;
+        }
+        .table-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #1e3d59;
+            color: white;
+        }
+        .acciones-btn {
+            display: flex;
+            gap: 5px;
+        }
+        .btn-editar {
+            background-color: #3c6e71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn-eliminar {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .hobbie-image {
+            max-width: 200px;
+            max-height: 150px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mis Hobbies</h1>
+    <button onclick="logout()" style="margin-bottom: 20px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; background-color: #dc3545; color: white;">Cerrar Sesión</button>
+
+    <div class="crud-section">
+        <h2>Gestión de Mis Hobbies</h2>
+        
+       
+        <div class="form-container">
+            <h3 id="form-title">Agregar Nuevo Hobbie</h3>
+            <form id="hobbie-form" enctype="multipart/form-data">
+                <input type="hidden" id="hobbie-id">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fotografia">Fotografía:</label>
+                    <input type="file" id="fotografia" accept="image/*">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submit-btn">Guardar</button>
+                    <button type="button" id="cancel-btn" style="display: none;">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+      
+        <div class="table-container">
+            <h3>Lista de Mis Hobbies</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fotografía</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="hobbies-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br>
+    <h1>Video que me motiva a la edición</h1>
+    <video src="videos/pasatiempo.mp4" controls width="640" height="360" type="mp4"></video>
+
+    <br>
+    <a href="yo.html">
+        <img src="image/flecha de regresar al inicio.png" alt="Volver" width="85">
+    </a>
+    <a href="enviamemensaje.html">
+        <img src="image/enviamensaje.png" alt="Enviar mensaje" width="85">
+    </a>
+
+    <script src="js/auth.js"></script>
+    <script src="js/hobbies_data.js"></script>
+    <script src="js/hobbies_crud.js"></script>
+</body>
+</html>

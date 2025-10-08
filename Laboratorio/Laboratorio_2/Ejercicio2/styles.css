@@ -1,0 +1,16 @@
+td, tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid green;
+    width: 100%;
+    height: 100%;
+    
+}
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,101 @@
+/* ----- Configuración general ----- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* ----- Encabezados ----- */
+h1 {
+    color: #1e3d59;
+    text-align: center;
+}
+
+h3, h4 {
+    color: #3c6e71;
+}
+
+/* ----- Tablas ----- */
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1e3d59;
+    color: white;
+}
+
+/* ----- Imágenes ----- */
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ----- Videos ----- */
+video {
+    border: 3px solid #1e3d59;
+    border-radius: 8px;
+}
+
+/* ----- Botones y enlaces de imagen ----- */
+a img {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+a img:hover {
+    transform: scale(1.1);
+}
+
+/* ----- Formularios ----- */
+form table {
+    border: none;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #1e3d59;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3c6e71;
+}
+
+/* ----- Layout con Flex (para yo.html) ----- */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ----- Layout con Grid (para miciudad.html) ----- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Raíces - Ecuación Cuadrática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Raíces de Ecuación Cuadrática</h1>
+            <p>Resuelve ecuaciones de la forma: <strong>ax² + bx + c = 0</strong></p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Ingrese los coeficientes:</h2>
+                <form id="ecuacionForm">
+                    <div class="input-group">
+                        <label for="coeficienteA">Coeficiente a:</label>
+                        <input type="number" id="coeficienteA" step="any" required>
+                        <span class="coeficiente">x²</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="coeficienteB">Coeficiente b:</label>
+                        <input type="number" id="coeficienteB" step="any" required>
+                        <span class="coeficiente">x</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="coeficienteC">Coeficiente c:</label>
+                        <input type="number" id="coeficienteC" step="any" required>
+                        <span class="coeficiente">= 0</span>
+                    </div>
+
+                    <button type="submit" class="btn-calcular">Calcular Raíces</button>
+                    <button type="button" class="btn-limpiar" onclick="limpiarCampos()">Limpiar</button>
+                </form>
+            </section>
+
+            <section class="resultados-section">
+                <h2>Resultados:</h2>
+                <div id="ecuacionMostrada" class="ecuacion-display"></div>
+                
+                <div id="discriminanteInfo" class="discriminante-info"></div>
+                
+                <div class="raices-container">
+                    <div id="raiz1" class="raiz real">
+                        <h3>Raíz 1 (x₁):</h3>
+                        <span class="valor-raiz">-</span>
+                    </div>
+                    
+                    <div id="raiz2" class="raiz real">
+                        <h3>Raíz 2 (x₂):</h3>
+                        <span class="valor-raiz">-</span>
+                    </div>
+                </div>
+
+                <div id="raicesImaginarias" class="raices-imaginarias">
+                    <h3>Raíces Complejas:</h3>
+                    <div class="raiz-compleja">
+                        <span class="valor-raiz">-</span>
+                    </div>
+                    <div class="raiz-compleja">
+                        <span class="valor-raiz">-</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p> Calculadora de Ecuaciones Cuadráticas - JavaScript DOM</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

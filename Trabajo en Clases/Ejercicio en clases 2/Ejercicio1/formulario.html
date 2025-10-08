@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Cliente</h2>
+        <form action="mostrar.php" method="POST" class="formulario">
+            <label>Nombres:</label>
+            <input type="text" name="nombres" required>
+
+            <label>Apellidos:</label>
+            <input type="text" name="apellidos" required>
+
+            <label>Sexo:</label>
+            <select name="sexo" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+
+            <label>Dirección:</label>
+            <input type="text" name="direccion" required>
+
+            <label>Celular:</label>
+            <input type="text" name="celular" required>
+
+            <label>Correo:</label>
+            <input type="email" name="correo" required>
+
+            <button type="submit">Mostrar</button>
+        </form>
+    </div>
+</body>
+</html>

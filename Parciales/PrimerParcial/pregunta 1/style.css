@@ -1,0 +1,132 @@
+#content-principal {
+    width: 900px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.big-text {
+    font-size: 22px;
+}
+
+.medium-text {
+    font-size: 20px;
+}
+
+#content-header {
+    display: flex;
+    flex-direction: column;
+
+    #usfx-title-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+
+        #usfx {
+            width: 20%;
+        }
+        #uni-facu {
+            width: 60%;
+        }
+        #logo {
+            width: 20%;
+        }
+    }
+
+    #sis-com {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+
+        #sis {
+            width: 50%;
+            padding: 8px;
+            background-color: #D9D9D9;
+        }
+        #com {
+            width: 50%;
+            padding: 8px;
+            background-color: #92D050;
+        }
+    }
+
+    #semestre-preguntas {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.733);
+
+        #semestre {
+            width: 45%;
+            padding: 1px;
+            color: #FFC000;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        #preguntas {
+            width: 55%;
+            display: flex;
+            flex-direction: row;
+            padding: 1px;
+            display: flex;
+            justify-content: center;
+        }
+        #content-bordes {
+            border: 2px solid #C60000;
+            width: 120px;
+            height: 30px;
+            margin: 2px;
+            background-color: #ffc107;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+#content-body {
+    display: flex;
+    flex-direction: row;
+
+    #preguntas {
+        width: 120px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+    }
+    #content-bordes {
+        border: 2px solid #C60000;
+        width: 100px;
+        height: 30px;
+        margin: 2px;
+        background-color: #ffc107;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #contenido {
+        width: 780;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        background-color: #D9D9D9;
+
+        #video {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        #image {
+            width: 50%;
+        }
+    }
+}

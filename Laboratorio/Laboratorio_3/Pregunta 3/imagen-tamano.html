@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 3 - Control de Tamaño de Imagen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Tamaño de Imagen</h1>
+        
+        <div class="image-controls">
+            <div class="control-group">
+                <label for="cantidad">Cantidad de píxeles:</label>
+                <input type="number" id="cantidad" value="50" min="1" max="500">
+            </div>
+            
+            <div class="buttons">
+                <button id="agrandar" class="btn-agrandar">Agrandar</button>
+                <button id="reducir" class="btn-reducir">Reducir</button>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img id="imagen" src="sucre ciudad blanca.jpg" 
+                 alt="Imagen de ejemplo controlable">
+        </div>
+
+        <div class="info">
+            <p>Ancho actual: <span id="ancho-actual">400</span>px</p>
+            <p>Alto actual: <span id="alto-actual">300</span>px</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

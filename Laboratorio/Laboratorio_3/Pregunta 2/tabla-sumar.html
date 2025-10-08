@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 2 - Tabla de Sumar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tabla de Sumar</h1>
+        
+        <div class="input-group">
+            <label for="numero">Ingrese un número:</label>
+            <input type="number" id="numero" min="1" value="3">
+            <button onclick="generarTabla()">Generar Tabla</button>
+        </div>
+
+        <div class="color-control">
+            <label for="colorResultado">Color para resultados:</label>
+            <input type="color" id="colorResultado" value="#4CAF50">
+            <button onclick="cambiarColor()">Aplicar Color</button>
+        </div>
+
+        <div id="tabla-container">
+            <table id="tabla-sumar">
+                <thead>
+                    <tr>
+                        <th>Operador 1</th>
+                        <th>Operación</th>
+                        <th>Operador 2</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-body">
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function generarTabla() {
+            const numero = parseInt(document.getElementById('numero').value);
+            const tablaBody = document.getElementById('tabla-body');
+            
+            if (isNaN(numero)) {
+                alert('Por favor ingrese un número válido');
+                return;
+            }
+
+            let html = '';
+            for (let i = 1; i <= 10; i++) {
+                html += `
+                    <tr>
+                        <td>${numero}</td>
+                        <td>+</td>
+                        <td>${i}</td>
+                        <td class="resultado">${numero + i}</td>
+                    </tr>
+                `;
+            }
+            
+            tablaBody.innerHTML = html;
+            aplicarColorActual(); 
+        }
+
+        function cambiarColor() {
+            aplicarColorActual();
+        }
+
+        function aplicarColorActual() {
+            const color = document.getElementById('colorResultado').value;
+            const resultados = document.querySelectorAll('.resultado');
+            
+            resultados.forEach(celda => {
+                celda.style.backgroundColor = color;
+                celda.style.color = '#000';
+                celda.style.fontWeight = 'bold';
+            });
+        }
+
+      
+        document.addEventListener('DOMContentLoaded', generarTabla);
+    </script>
+</body>
+</html>

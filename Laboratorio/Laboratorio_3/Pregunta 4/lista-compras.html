@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 4 - Lista de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Compras</h1>
+        
+        <div class="input-group">
+            <div class="form-group">
+                <label for="elemento">Elemento de lista:</label>
+                <input type="text" id="elemento" placeholder="Ej: Lechuga">
+            </div>
+            
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="color" id="color" value="#4CAF50">
+            </div>
+            
+            <button onclick="añadirElemento()">Añadir</button>
+        </div>
+
+        <div class="lista-container">
+            <h2>Lista de Compras:</h2>
+            <ul id="lista-compras">
+         
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function añadirElemento() {
+            const elementoInput = document.getElementById('elemento');
+            const colorInput = document.getElementById('color');
+            const lista = document.getElementById('lista-compras');
+            
+            const texto = elementoInput.value.trim();
+            const color = colorInput.value;
+            
+            if (texto === '') {
+                alert('Por favor ingrese un elemento');
+                return;
+            }
+            
+
+            const nuevoElemento = document.createElement('li');
+            nuevoElemento.textContent = texto;
+            nuevoElemento.style.color = color;
+            nuevoElemento.style.fontWeight = 'bold';
+            nuevoElemento.style.margin = '5px 0';
+            nuevoElemento.style.padding = '8px';
+            nuevoElemento.style.borderLeft = `4px solid ${color}`;
+            nuevoElemento.style.backgroundColor = `${color}20`; // Color con transparencia
+            
+  
+            const botonEliminar = document.createElement('button');
+            botonEliminar.textContent = 'Eliminar';
+            botonEliminar.className = 'eliminar-btn';
+            botonEliminar.onclick = function() {
+                lista.removeChild(nuevoElemento);
+            };
+            
+            nuevoElemento.appendChild(botonEliminar);
+            lista.appendChild(nuevoElemento);
+            
+
+            elementoInput.value = '';
+            elementoInput.focus();
+        }
+
+        document.getElementById('elemento').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                añadirElemento();
+            }
+        });
+    </script>
+</body>
+</html>

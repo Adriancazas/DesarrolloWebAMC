@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        #contenedor{
+            border: 2px solid blue;
+            padding: 20px;
+            width: 400px;
+            margin: 0 auto;
+            text-align: center; 
+            padding-right: 100px;
+        }
+        #arriba{
+            margin-bottom: 30px;
+        }
+        label{
+            margin-right: 30px;
+        }
+        select{
+            border: 2px solid red;
+            width: 100px;
+            text-align: center;
+        }
+        #botones{
+            display: flex;
+            justify-content: center;
+            gap: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <form action="Fdatos.php" method="post" >
+            <div id="arriba">
+                <label for="nro">Introduzca número alumnos:</label>
+                <select name="nro">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div id="botones">
+                <input type="submit" value="Enviar" style="background-color: #ffc000; padding: 5px 30px; border: 1px solid black;">
+                <input type="reset" value="Limpiar" style="background-color: #e8fdcb; border: 2px solid #bfd692; padding: 5px 30px;">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

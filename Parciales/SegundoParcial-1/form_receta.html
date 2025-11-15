@@ -1,0 +1,30 @@
+<h3>Agregar Nueva Receta</h3>
+<form id="formReceta">
+    <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="idtiporeceta">Tipo de Receta:</label>
+        <select id="idtiporeceta" name="idtiporeceta" required>
+            <option value="">Seleccionar...</option>
+            <option value="1">Sopas</option>
+            <option value="2">Platos</option>
+            <option value="3">Postres</option>
+            <option value="4">Aperitivos</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="preparacion">Preparación:</label>
+        <textarea id="preparacion" name="preparacion" rows="4" required></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="fotografia">Fotografía:</label>
+        <input type="text" id="fotografia" name="fotografia" placeholder="nombre_imagen.jpg" required>
+    </div>
+    
+    <button type="submit" class="btn-guardar">Guardar Receta</button>
+</form>

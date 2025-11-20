@@ -1,0 +1,38 @@
+<h2>Agregar Nueva Receta</h2>
+
+<form id="formReceta" onsubmit="guardarReceta(event)">
+    <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Título:</label>
+        <input type="text" name="titulo" required 
+               style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Tipo de Receta:</label>
+        <select name="idtiporeceta" required 
+                style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <option value="">Seleccionar tipo...</option>
+            <option value="1">Sopas</option>
+            <option value="2">Platos</option>
+            <option value="3">Postres</option>
+            <option value="4">Aperitivos</option>
+        </select>
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Preparación:</label>
+        <textarea name="preparacion" required rows="5"
+                  style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Imagen:</label>
+        <input type="file" name="fotografia" accept="image/*" required
+               style="width: 100%; padding: 8px;">
+    </div>
+    
+    <button type="submit" 
+            style="width: 100%; padding: 12px; background: #1a73e8; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+        Guardar Receta
+    </button>
+</form>
